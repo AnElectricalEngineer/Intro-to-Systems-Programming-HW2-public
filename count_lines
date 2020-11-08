@@ -1,0 +1,13 @@
+#!/bin/bash
+#*************************************************************************************
+# script name: count_lines
+#
+# Description: This function counts the total number of lines in all the files
+# in all of the subdirectories in a given directory, and prints the sum.
+#
+# Parameters:  Parameter 1: The directory that we want to search
+#
+# Return value: None
+#*************************************************************************************
+
+find "$1" -type f -exec cat {} + | wc -l
